@@ -73,19 +73,15 @@ def fetch_bcra(variable_id: int, days: int = 30) -> dict:
         r = httpx.get(url, params=params, timeout=15, verify=False)
         r.raise_for_status()
         if not r.text.strip():
-            print(f"[BCRA v4] variable={variable_id}: respuesta vacía (HTTP {r.status_code})")
             return {"variable_id": variable_id, "data": []}
         body = r.json()
-        # v4.0: { "status": ..., "metadata": ..., "results": [{ "idVariable": N, "detalle": [{fecha, valor}, ...] }] }
+        # v4.0: { "results": [{ "idVariable": N, "detalle": [{fecha, valor}, ...] }] }
         raw_results = body.get("results", []) if isinstance(body, dict) else []
-        if raw_results and isinstance(raw_results[0], dict) and "detalle" in raw_results[0]:
-            # Estructura v4.0: datos dentro de detalle del primer elemento
-            data_points = raw_results[0]["detalle"]
-        elif isinstance(raw_results, list):
-            # Estructura plana (fallback)
-            data_points = raw_results
-        else:
-            data_points = []
+        first = raw_results[0] if raw_results else {}
+        data_points = (
+            first.get("detalle", []) if isinstance(first, dict) and "detalle" in first
+            else (raw_results if isinstance(raw_results, list) else [])
+        )
         return {
             "variable_id": variable_id,
             "data": [
@@ -94,9 +90,8 @@ def fetch_bcra(variable_id: int, days: int = 30) -> dict:
                 if x.get("fecha") and x.get("valor") is not None
             ],
         }
-    except Exception as e:
-        print(f"[BCRA v4] variable={variable_id}: error={e}")
-        # Fallback: intentar v2.0 por si v4.0 no responde
+    except Exception:
+        # Fallback: v2.0 por si v4.0 no responde
         try:
             url_v2 = f"https://api.bcra.gob.ar/estadisticas/v2.0/datosvariable/{variable_id}/{desde}/{hasta}"
             r = httpx.get(url_v2, timeout=10, verify=False)
@@ -104,15 +99,11 @@ def fetch_bcra(variable_id: int, days: int = 30) -> dict:
             if not r.text.strip():
                 return {"variable_id": variable_id, "data": []}
             results = r.json().get("results", [])
-            print(f"[BCRA v2] variable={variable_id}: {len(results)} registros fallback")
-            if results:
-                print(f"[BCRA v2] primer item: {results[0]}")
             return {
                 "variable_id": variable_id,
                 "data": [{"fecha": x["fecha"], "valor": x["valor"]} for x in results],
             }
-        except Exception as e2:
-            print(f"[BCRA v2 fallback] variable={variable_id}: error={e2}")
+        except Exception:
             return {"variable_id": variable_id, "data": []}
 
 # ── RSS — noticias en tiempo real ──────────────────────────────────
