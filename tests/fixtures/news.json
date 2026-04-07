@@ -1,0 +1,48 @@
+{
+  "cached_at": "2026-01-01T10:00:00",
+  "ttl_seconds": 1800,
+  "data": [
+    {
+      "medio": "infobae",
+      "titulo": "El dólar blue cerró estable y el Banco Central sumó reservas",
+      "resumen": "La divisa paralela operó sin variaciones mientras el BCRA compró USD 120 millones en el mercado oficial.",
+      "link": "https://www.infobae.com/economia/2026/01/01/ejemplo/",
+      "publicado": "Wed, 01 Jan 2026 10:00:00 -0300"
+    },
+    {
+      "medio": "infobae",
+      "titulo": "Inflación de diciembre: el índice quedó por debajo de las expectativas",
+      "resumen": "El IPC de diciembre registró una variación del 2.7%, por debajo del 3% esperado por el consenso de mercado.",
+      "link": "https://www.infobae.com/economia/2026/01/01/ejemplo2/",
+      "publicado": "Wed, 01 Jan 2026 09:00:00 -0300"
+    },
+    {
+      "medio": "lanacion",
+      "titulo": "YPF anunció nuevas inversiones en Vaca Muerta",
+      "resumen": "La petrolera estatal confirmó un plan de inversión de USD 2.000 millones para el primer semestre de 2026.",
+      "link": "https://www.lanacion.com.ar/economia/2026/01/01/ejemplo/",
+      "publicado": "Wed, 01 Jan 2026 08:30:00 -0300"
+    },
+    {
+      "medio": "lanacion",
+      "titulo": "MercadoLibre alcanzó un nuevo máximo histórico en la bolsa de Nueva York",
+      "resumen": "Las acciones del gigante tecnológico subieron 4% impulsadas por resultados del trimestre.",
+      "link": "https://www.lanacion.com.ar/economia/2026/01/01/ejemplo2/",
+      "publicado": "Wed, 01 Jan 2026 07:00:00 -0300"
+    },
+    {
+      "medio": "ambito",
+      "titulo": "Reservas del BCRA superaron los USD 27.000 millones",
+      "resumen": "El stock de reservas internacionales acumuló cinco semanas consecutivas de crecimiento.",
+      "link": "https://www.ambito.com/economia/2026/01/01/ejemplo/",
+      "publicado": "Wed, 01 Jan 2026 11:00:00 -0300"
+    },
+    {
+      "medio": "cronista",
+      "titulo": "El Merval avanzó 1,8% traccionado por bancos y energéticas",
+      "resumen": "El índice de acciones líderes cerró la jornada en alza con Galicia y YPF a la cabeza.",
+      "link": "https://www.cronista.com/finanzas-mercados/2026/01/01/ejemplo/",
+      "publicado": "Wed, 01 Jan 2026 18:00:00 -0300"
+    }
+  ]
+}

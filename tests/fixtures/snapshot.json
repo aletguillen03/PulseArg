@@ -1,0 +1,21 @@
+{
+  "cached_at": "2026-01-01T10:00:00",
+  "ttl_seconds": 300,
+  "data": [
+    {"sector": "indices",       "nombre": "Merval",        "ticker": "^MERV",    "precio": 2450000.0, "var_pct":  1.8,  "volumen": 12000000, "moneda": "ARS"},
+    {"sector": "indices",       "nombre": "Merval USD",    "ticker": "M.BA",     "precio": 2100.0,    "var_pct":  0.9,  "volumen":  5000000, "moneda": "ARS"},
+    {"sector": "indices",       "nombre": "BYMA General",  "ticker": "^BYMA",    "precio": 11500.0,   "var_pct":  1.2,  "volumen":  8000000, "moneda": "ARS"},
+    {"sector": "energia",       "nombre": "YPF",           "ticker": "YPF",      "precio": 18.45,     "var_pct":  2.3,  "volumen":  9500000, "moneda": "USD"},
+    {"sector": "energia",       "nombre": "Pampa Energía", "ticker": "PAM",      "precio": 52.10,     "var_pct":  1.5,  "volumen":  4200000, "moneda": "USD"},
+    {"sector": "energia",       "nombre": "Vista Energy",  "ticker": "VIST",     "precio": 41.20,     "var_pct":  3.1,  "volumen":  3100000, "moneda": "USD"},
+    {"sector": "energia",       "nombre": "Edenor",        "ticker": "EDN",      "precio": 14.30,     "var_pct": -0.7,  "volumen":  1800000, "moneda": "USD"},
+    {"sector": "finanzas",      "nombre": "Galicia",       "ticker": "GGAL",     "precio": 43.80,     "var_pct":  2.1,  "volumen":  7600000, "moneda": "USD"},
+    {"sector": "finanzas",      "nombre": "Macro",         "ticker": "BMA",      "precio": 29.50,     "var_pct":  1.4,  "volumen":  3900000, "moneda": "USD"},
+    {"sector": "tech_consumer", "nombre": "MercadoLibre",  "ticker": "MELI",     "precio": 2310.0,    "var_pct":  3.8,  "volumen":  2200000, "moneda": "USD"},
+    {"sector": "tech_consumer", "nombre": "Globant",       "ticker": "GLOB",     "precio": 168.0,     "var_pct":  1.2,  "volumen":   980000, "moneda": "USD"},
+    {"sector": "tech_consumer", "nombre": "Despegar",      "ticker": "DESP",     "precio": 8.90,      "var_pct": -1.1,  "volumen":  1100000, "moneda": "USD"},
+    {"sector": "agro",          "nombre": "Adecoagro",     "ticker": "AGRO",     "precio": 11.20,     "var_pct":  0.5,  "volumen":   620000, "moneda": "USD"},
+    {"sector": "agro",          "nombre": "Soja CME",      "ticker": "ZS=F",     "precio": 1042.0,    "var_pct": -0.3,  "volumen":  8800000, "moneda": "USD"},
+    {"sector": "agro",          "nombre": "Maíz CME",      "ticker": "ZC=F",     "precio": 452.0,     "var_pct":  0.8,  "volumen": 12400000, "moneda": "USD"}
+  ]
+}

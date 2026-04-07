@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "pulsearg",
+      "runtimeExecutable": "/Users/alejoguillen/Proyectos/PulseArg/venv/bin/streamlit",
+      "runtimeArgs": ["run", "modules/dashboard.py", "--server.port", "8501", "--server.headless", "true"],
+      "port": 8501
+    }
+  ]
+}
